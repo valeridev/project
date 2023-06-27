@@ -9,6 +9,10 @@
         <style>
             body {
                 font-family: sans-serif;
+                background-image: url("https://static9.depositphotos.com/1593759/1168/i/450/depositphotos_11687543-stock-photo-the-sun-above-the-horizon.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
 
             }
 
@@ -17,13 +21,16 @@
                 padding-right: 15px;
                 padding-left: 15px;
                 padding-top: 10px;
+                padding-bottom: 10px;
                 margin-right: auto;
                 margin-left: auto;
                 margin-top: 15px;
+                border: 0.1px solid antiquewhite;
+                border-radius: 7px;
 
-                border-radius: 10px;
-                background-color: rgb(171, 189, 240);
+                background-color: rgba(51, 144, 244, 0.1);
                 color: #0d6efd;
+                color: antiquewhite;
 
             }
 
@@ -39,15 +46,16 @@
             li,
             span,
             a {
-                color: #7c7c7c;
+                color: black;
                 font-family: cursive;
+                font-weight: 600;
 
             }
 
             li {
                 list-style-type: none;
                 margin-right: 90px;
-                font-weight: 500;
+                font-weight: 800;
             }
 
             .shift {
@@ -58,9 +66,10 @@
             .temperature {
                 font-size: 90px;
                 font-weight: 400;
-                color: black;
+                color: antiquewhite;
                 padding-top: 0;
                 padding-bottom: 10px;
+
             }
 
             .units {
@@ -74,6 +83,7 @@
 
             a {
                 color: blue;
+
 
                 text-decoration: none;
             }
@@ -129,7 +139,7 @@
                     </div>
                 </form>
 
-                <h1 id="city">Sydney</h1>
+                <h1 id="city">Rio de Janeiro</h1>
                 <ul class="shift">
                     <li id="date"></li>
                     <li id="description"></li>
@@ -143,7 +153,7 @@
                             <div class="number">
                                 <span class="temperature" id="temperature">19</span>
                                 <span class="units">
-                                    <a href="#" id="celsius-link"> °C </a>
+                                    <a href="#" id="celsius-link">°C</a>
                                     <span class="separator">|</span>
                                     <a href="#" id="fahrenheit-link">°F</a>
 
@@ -159,9 +169,19 @@
                     </div>
                 </div>
             </div>
+            <small>
+                <a href="https://github.com/valeridev/project/blob/main/vc" target="_blank"> open-source code</a> by
+                Váleri Calhau
+            </small>
+
         </div>
 
-        <script>function formatDate(date) {
+
+        <script>
+
+
+
+            function formatDate(date) {
                 let hours = date.getHours();
                 if (hours < 10) {
                     hours = `0${hours}`;
@@ -246,7 +266,7 @@
             let CurrentLocationButton = document.querySelector("#current-location-button");
             CurrentLocationButton.addEventListener("click", getCurrentLocation);
 
-            searchCity("Sydney");
+            searchCity("Rio de Janeiro");
 
 
 
@@ -269,11 +289,9 @@
 
 
 
-            let celsiusLink = document.querySelector("#celsius-link");
-            celsiusLink.addEventListener("click", convertToCelsius);
 
-            let fahrenheitLink = document.querySelector("#fahrenheit-link");
-            fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+
 
 
 
