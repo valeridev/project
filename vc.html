@@ -18,33 +18,37 @@
 
 
             <style>
-         body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    background-image: url("https://static9.depositphotos.com/1593759/1168/i/450/depositphotos_11687543-stock-photo-the-sun-above-the-horizon.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
+                body {
+                    font-family: sans-serif;
+                    background-image: url("https://static9.depositphotos.com/1593759/1168/i/450/depositphotos_11687543-stock-photo-the-sun-above-the-horizon.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 100vh;
+                }
 
-.container {
-    width: 50% important!; 
-    max-width: 500px important!;
-    height: 80vh;
-    padding: 15px;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
 
+
+                .container {
+                    width: 100%;
+                    height: 80vh;
+                    padding: 10px 25px;
+                    margin: 15px 15px -30px 15px;
+
+                    color: antiquewhite;
+                    position: relative;
+                    overflow: visible;
+                }
+
+                .weather-app-wrapper {
+                    padding-top: 120px;
+                    max-width: 500px;
+                    margin: 30px auto;
+                    color: antiquewhite;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
 
                 .open-source {
-
                     position: fixed;
                     left: 0;
                     right: 0;
@@ -68,55 +72,43 @@
                 a {
                     color: black;
                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
                 }
 
                 li {
                     list-style-type: none;
                     margin-right: 90px;
                     color: black;
-
                 }
 
                 #date,
                 #description {
                     color: rgba(0, 0, 0, 0.8);
-
-
                 }
 
                 .shift {
                     padding-right: 150px;
-
-
                 }
-
-
 
                 .temperature {
                     font-size: 90px;
                     font-family: cursive;
-                    color: black;
+                    color: antiquewhite;
                     padding-top: 10px;
                     padding-bottom: 10px;
                 }
 
                 .temperature.temperature-value {
-                    color: black;
+                    color: antiquewhite;
                 }
 
 
                 .units {
-
-
                     margin-left: 1px;
                     margin-bottom: 80px;
                     font-size: 20px;
                     position: absolute;
                     margin-top: 20px;
                 }
-
-
 
                 span {
                     margin-bottom: -10px;
@@ -135,31 +127,24 @@
 
                 .wind {
                     padding-top: 47px;
-
-
-
                 }
 
 
                 #celsius-link {
-                    color: black;
+                    color: antiquewhite;
                     cursor: pointer;
                 }
 
                 #fahrenheit-link {
-                    color: black;
+                    color: antiquewhite;
                     cursor: pointer;
                 }
 
                 .separator {
-                    color:black;
+                    color: antiquewhite;
                     font-family: cursive;
 
                 }
-
-
-
-
 
                 #current-location-button {
 
@@ -170,6 +155,113 @@
 
                     color: white;
                 }
+
+                .active-unit {
+
+                    text-decoration-style: double;
+
+
+                }
+
+
+
+                @media (max-width: 768px) {
+                    .temperature.temperature-value {
+                        font-size: 60px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .weather-icon {
+                        font-size: 50px;
+                    }
+
+                    .units {
+                        font-size: 16px;
+                    }
+                }
+
+                a {
+
+                    text-decoration: none;
+
+                }
+
+                a:hover {
+                    color: black;
+                }
+
+                @media (max-width: 768px) {
+                    .temperature.temperature-value {
+                        font-size: 60px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .weather-icon {
+                        font-size: 50px;
+                    }
+                }
+
+                .units {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 768px) {
+
+                    /* Override Bootstrap button styles */
+                    .btn-primary,
+                    .btn {
+                        background-color: transparent !important;
+                        border: none !important;
+                        box-shadow: none !important;
+                    }
+
+                    /* Override Bootstrap button hover and focus styles */
+                    .btn-primary:hover,
+                    .btn-primary:focus,
+                    .btn:hover,
+                    .btn:focus {
+                        background-color: transparent !important;
+                        border: none !important;
+                        box-shadow: none !important;
+                    }
+                }
+
+
+
+
+                @media (max-width: 768px) {
+                    body {
+                        /* Adjust the font size and line height for better readability on smaller screens */
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+
+                    .weather-app-wrapper {
+                        /* Center the app on smaller screens */
+                        max-width: 100%;
+                        margin: 0 auto;
+                    }
+
+                    .weather-app {
+                        /* Add some padding to the app container on smaller screens */
+                        padding: 10px;
+                    }
+
+                    .weather-temperature strong {
+                        /* Adjust the temperature font size for smaller screens */
+                        font-size: 40px;
+                    }
+
+                    .weather-forecast .col-2 {
+                        /* Adjust the width of forecast cards on smaller screens */
+                        flex-basis: 16.66%;
+                        max-width: 16.66%;
+                    }
+                }
+
+                /* Hide the "Search" button on smaller screens to save space */
             </style>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
@@ -234,7 +326,7 @@
                 </div>
             </div>
             <small class="open-source">
-                <a href="https://github.com/valeridev/project/blob/main/vc.html" target="_blank"> open-source code</a>
+                <a href="https://github.com/valeridev/" target="_blank"> open-source code</a>
                 by
                 Váleri Calhau
             </small>
@@ -321,7 +413,16 @@
                 let celsiusTemperature = parseInt(temperatureElement.innerHTML);
                 let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
                 temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+                let celsiusLink = document.querySelector("#celsius-link");
+                let fahrenheitLink = document.querySelector("#fahrenheit-link");
+                celsiusLink.classList.remove("active-unit");
+                fahrenheitLink.classList.add("active-unit");
+                celsiusLink.style.color = "";
+                fahrenheitLink.style.color = "#9AC0C8";
             }
+
+
+
 
             function convertToCelsius(event) {
                 event.preventDefault();
@@ -329,7 +430,15 @@
                 let fahrenheitTemperature = parseInt(temperatureElement.innerHTML);
                 let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
                 temperatureElement.innerHTML = Math.round(celsiusTemperature);
+                let celsiusLink = document.querySelector("#celsius-link");
+                let fahrenheitLink = document.querySelector("#fahrenheit-link");
+                celsiusLink.classList.add("active-unit");
+                fahrenheitLink.classList.remove("active-unit");
+                celsiusLink.style.color = "#9AC0C8";
+                fahrenheitLink.style.color = "";
             }
+
+
 
             let dateElement = document.querySelector("#date");
             let currentTime = new Date();
@@ -384,10 +493,11 @@
                 }
             }
         </script>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
+
+
     </body>
 
 </html>
